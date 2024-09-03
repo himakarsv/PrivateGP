@@ -210,6 +210,7 @@ const login = async (req, res, next) => {
         user,
         individualData,
       });
+      return;
     } else if (user.role === "COMPANY") {
       const companyData = await prisma.company.findUnique({
         where: { email },
@@ -220,6 +221,7 @@ const login = async (req, res, next) => {
         user,
         companyData,
       });
+      return;
     }
     // Send response with the token or user info
     res.status(200).json({
