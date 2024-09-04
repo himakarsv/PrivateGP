@@ -92,7 +92,7 @@ const registerIndividual = async (req, res, next) => {
   }
 };
 
-const registerCompany = async (req, res) => {
+const registerCompany = async (req, res, next) => {
   const {
     email,
     password,
