@@ -17,8 +17,9 @@ const corsOptions = {
   optionsSuccessStatus: 200,
   credentials: true,
 };
+// console.log(allowedDomain);
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 // app.use(cors());
