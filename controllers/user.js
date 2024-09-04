@@ -38,6 +38,7 @@ const editProfile = async (req, res) => {
         residency,
       },
     });
+    return res.json({ message: "User updated successfully" });
   }
 
   if (req.role === "COMPANY") {
@@ -78,6 +79,7 @@ const editProfile = async (req, res) => {
         contactPersonName,
       },
     });
+    return res.json({ message: "User updated successfully" });
   }
 };
 
