@@ -24,7 +24,7 @@ const registerIndividual = async (req, res, next) => {
     name,
     residency,
   } = req.body;
-
+  console.log(req.body);
   try {
     // Save user details in the database
     const user = await prisma.user.findUnique({
