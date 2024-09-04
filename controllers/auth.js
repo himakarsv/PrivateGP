@@ -127,7 +127,6 @@ const registerCompany = async (req, res, next) => {
         "salutation",
         "name",
         "companyID",
-        "pan",
         "contactPersonName",
       ],
       req.body
