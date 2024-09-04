@@ -5,10 +5,12 @@ const prisma = new PrismaClient();
 const { errorHandler } = require("../middlewares/error.js");
 
 const findMissingFields = (requiredFields, fields) => {
-  const missingFields = requiredFields.filter((field) => !fields[field]);
-
+  const missingFields = requiredFields.filter(
+    (field) => fields[field] === undefined
+  );
   return missingFields;
 };
+
 const registerIndividual = async (req, res, next) => {
   const {
     email,
